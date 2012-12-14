@@ -1,0 +1,39 @@
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <%= link_to image_tag('logo.png'), root_path, :class => "brand" %>
+        </div>
+      </div>
+    </div>
+      
+    <div class="container">
+        <div id="login-wraper">
+            <div class="form login-form">
+              <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                <legend>Sign in to <span class="blue">MyApp</span></legend>
+                <div class="body">
+                  <%= f.label :username %>
+                    <%= f.text_field :username %>
+                  <%= f.label :password %>
+                    <%= f.password_field :password %>
+                </div>
+                <div class="footer">
+                    <label class="checkbox inline">
+                        <%= f.check_box :remember_me, :id => "inlineCheckbox1" %> Remember me
+                    </label>
+                    <%= f.submit "Login", :class => "btn btn-success" %>
+                </div>
+              <% end %>
+            </div>
+        </div>
+    </div>
+
+    <footer class="white navbar-fixed-bottom">
+      Don't have an account yet? <%= link_to "Register",new_user_registration_path, :class => "btn btn-black" %>
+    </footer>
+</div>
