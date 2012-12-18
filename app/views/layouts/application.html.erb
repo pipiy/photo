@@ -12,9 +12,9 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
 
-    <%= stylesheet_link_tag "application", "bootstrap.min.css", "bootstrap-responsive.min.css", "typica-login.css", :media => "all" %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
 
-    <%= javascript_include_tag "application", "jquery.js", "bootstrap.js", "backstretch.min.js", "typica-login.js" %>
+    <%= javascript_include_tag "application" %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
@@ -38,8 +38,10 @@
     <%= bootstrap_flash %> 
   </head>
 
-
+ <%= render :partial => "devise/menu/login_items" %> 
 	<%= yield %>
    
   </body>
 </html>
+
+
