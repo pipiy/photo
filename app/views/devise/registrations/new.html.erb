@@ -1,3 +1,7 @@
+ <%= stylesheet_link_tag "application", "bootstrap.min.css", "bootstrap-responsive.min.css", "typica-login.css", :media => "all" %>
+
+<%= javascript_include_tag "application", "jquery.js", "bootstrap.js", "backstretch.min.js", "typica-login.js" %>
+
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
@@ -16,9 +20,9 @@
     	<div class="span6">
     		<div class="register-info-wraper">
     			<div id="register-info">
-    			
+
     				<h1>You are about 30 seconds away from using this awesome app. Good choice!</h1>
-    			
+
     				<ul dir="rtl">
     					<li>Blah blah blah</li>
     					<li>That's why this app is so awesome</li>
@@ -29,8 +33,9 @@
     		</div>
     	</div>
 
-    	<div class="span6" id="register-wraper">
-    		    <div class="form" id="register-form" >
+    	<div class="span6">
+    		<div id="register-wraper">
+    		    <div id="register-form" class="form">
     		        <%= render :template => "welcome/register" %>
     		    </div>
     		</div>
@@ -42,3 +47,5 @@
 <footer class="white navbar-fixed-bottom">
   Already have an account? <%= link_to "Sign in", root_path, :class =>"btn btn-black" %>
 </footer>
+
+
