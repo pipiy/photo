@@ -34,3 +34,49 @@
     font-weight: 400;
     src: local('Pacifico Regular'), local('Pacifico-Regular'), url(http://themes.googleusercontent.com/static/fonts/pacifico/v4/yunJt0R8tCvMyj_V4xSjafesZW2xOQ-xsNqO47m55DA.woff) format('woff');
   }
+
+  body {
+    padding-top: 130px;
+    color: #636363;
+    font: 11px/1.7 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    background: url("bg.jpg") repeat;
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    font-weight:700;
+    text-shadow:-1px -1px 1px #000;
+    margin:5px 0px;
+    padding:5px 0px;
+  }
+
+h1{
+  font-size:70px;
+  line-height:75px;
+  text-transform:uppercase;
+}
+
+h2{
+  font-size:45px;
+  line-height:50px;
+  text-transform:uppercase;
+}
+
+h3{
+  font-size:30px;
+  line-height:35px;
+}
+
+h4{
+  font-size:25px;
+  line-height:30px;
+}
+
+h5{
+  font-size:20px;
+  line-height:25px;
+}
+
+h6{
+  font-size:15px;
+  line-height:20px;
+}
