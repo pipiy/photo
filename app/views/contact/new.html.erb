@@ -1,0 +1,40 @@
+<div id="main">
+  <div class="container">
+    <div class="row">
+      <section id="page-title" class="span12">
+          <div align="center"><h1>Contact Us</h1><hr></div>
+          <h3>We wish to hear something from you</h3>
+          <hr>
+      </section>
+    </div>
+    <div class="row">
+      <section id="google" class="span12">
+          <div class="view-first">
+              <iframe height="425" width="1175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;daddr=Ulitsa+Slobodskaya+91,+Minsk,+Belarus&amp;ll=53.848399&amp;spn=27.444003&amp;t=m&amp;output=embed"></iframe>
+          </div>
+      </section>
+      <section id="page-title" class="span12">
+          <p><b>If you have any questions related to the site, to our business, if you want something to consult or something are not satisfied or just want to chat, you can contact us by filling the form on the page. </b></p>
+          <hr>
+      </section>
+      <section id="content" class="span3">
+        <h3 class="comment-title">Where We Are</h3>
+        <p class="address">HomeCompany, Inc<br>Slobodskay st. 91, Belarus, Minsk</p>
+        <abbr title="Phone">P: 8(017) 277-97-72<br>Mob: +375(29) 319-59-39</abbr><br>
+        <a href="mailto:artem.slabodnik@gmail.com">artem.slabodnik@gmail.com</a>
+      </section>
+      <section id="blog-single" class="span9">
+        <div class="comment-form">
+          <h3 class="comment-title">Leave a comment</h3>
+            <%= form_for (:contact), :url => { :action => :create } do |f| %>
+              <p><%= f.text_field :name, :class => "span4", :placeholder => "Name" %></p>
+              <p><%= f.text_field :email, :class => "span4", :placeholder => "Email" %></p>
+              <p><%= f.text_area :description, :class => "span6", :rows => "6", :placeholder => "Message" %></p>
+              <%= f.submit "Send", :class => "btn btn-large btn-success" %>
+              <%= f.button "Reset", :type => "reset", :class => "btn btn-large" %>
+            <% end %>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
