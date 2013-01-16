@@ -1,0 +1,6 @@
+<%= form_for :painting, :url => { :action => "create" } do |f| %>
+	<%= f.file_field :image %>
+	<%= f.label :remote_image_url, "or image url" %>
+	<%= f.text_field :remote_image_url %>
+	<%= f.submit "submit" %>
+<% end %>
