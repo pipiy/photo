@@ -1,5 +1,7 @@
 Photo::Application.routes.draw do
 
+  resources :contact, :only => [:new, :create]
+  
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   
   devise_for :users do
@@ -10,13 +12,10 @@ Photo::Application.routes.draw do
     root to: 'application#home'
   end
 
-  root :to => "welcome#page"
+  resources :paintings
 
-  resources :galleries do
-    resources :pictures do
-      collection do
-        post 'make_default'
-      end
-    end
-  end
+  match '/subscribe' => "application#subscribe"
+
+
+  root :to => "welcome#page"
 end
