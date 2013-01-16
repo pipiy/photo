@@ -1,10 +1,6 @@
-<html lang="en"><head>
-
-    <meta charset="utf-8">
-    <title>Photographer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+  <title>Photographer</title>
+    
     
     <!-- Styles -->
     <!-- HTML5 shim -->
@@ -19,28 +15,41 @@
 </head>    
 <body>
     
-    <div class="masthead clearfix">
-        <div class="container">
-            <div class="logo pull-left">Photographer</div>
-            <div class="socials pull-right">
-                <a href=""><i class="icon-twitter"></i></a> <!-- your twitter link -->
-                <a href=""><i class="icon-facebook"></i></a> <!-- your facebook link -->
-                <a href=""><i class="icon-linkedin"></i></a> <!-- your linkedin link -->
-                <a href=""><i class="icon-pinterest"></i></a> <!-- your pinterest link -->
-                <a href=""><i class="icon-envelope"></i></a> <!-- your email address -->
-            </div>
-        </div>
+<div class="masthead clearfix">
+  <div class="container">
+    <div class="logo pull-left">Photographer</div>
+      <div class="socials pull-right">
+        <%= link_to "http://twitter.com/" do %>
+          <i class="icon-twitter"></i>
+        <% end %>
+
+        <%= link_to "http://facebook.com/" do %>
+          <i class="icon-facebook"></i>
+        <% end %>
+
+        <%= link_to new_painting_path do %>
+          <i class="icon-plus"></i>
+        <% end %>
+
+        <%= link_to subscribe_path do %>
+          <i class="icon-pinterest"></i>
+        <% end %>
+
+        <%= link_to new_contact_path do %>
+          <i class="icon-envelope"></i>
+        <% end %>
+
+        <%= link_to destroy_user_session_path, :method => :delete do %>
+          <i class=" icon-off"></i>
+        <% end %>
+      </div>
     </div>
-    
-    
-    <div class="container">
-        <div class="clearfix">
-          <ul class="filter-nav">
-              <li class="active"><a data-id="all" href="">All</a></li>
-              <li><a data-id="portraits" href="">Portraits</a></li>
-              <li><a data-id="landscapes" href="">Landscapes</a></li>
-              <li><a data-id="animals" href="">Animals</a></li>
-          </ul>
-        </div>
-    </div>
-    
+  </div>
+</div>
+
+<div id="paintings">
+  <div class="painting">
+    <%= image_tag @painting.image_url(:thumb).to_s %>
+  </div>
+</div>
+
