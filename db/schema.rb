@@ -21,10 +21,26 @@ ActiveRecord::Schema.define(:version => 20130116155753) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "galleries", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "cover"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "paintings", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "image"
+  end
+
+  create_table "pictures", :force => true do |t|
+    t.string   "description"
+    t.string   "image"
+    t.integer  "gallery_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -43,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20130116155753) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "first_name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

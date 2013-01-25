@@ -1,4 +1,5 @@
 class Painting < ActiveRecord::Base
-  attr_accessible :image, :remote_image_url
+  attr_accessible :image
   mount_uploader :image, ImageUploader
 end
+

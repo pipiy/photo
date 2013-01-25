@@ -3,7 +3,7 @@ class PaintingsController < ApplicationController
 		@painting = Painting.new
 	end
 
-	def create 
+	def create
 		@painting = Painting.new(params[:painting])
 
 		if @painting.save
@@ -12,4 +12,9 @@ class PaintingsController < ApplicationController
 			render :new
 		end
 	end
+
+	def show
+		@painting = Painting.find(params[:id])
+	end
 end
+
