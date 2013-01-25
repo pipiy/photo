@@ -2,5 +2,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def home
-  end
+		@paiting = Painting.all
+	end
+
+	def show
+		@painting = Painting.find(params[:id]) 
+	end
 end
